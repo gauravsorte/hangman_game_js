@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+.headline{
+    display:flex;
+    justify-content: center;
+    font-size: 70px;
+    align-items: center;
+
+}
+
+.head_{
+    margin: 10px;
+    color: lightgreen;
+    font-family: Roboto;
+    font-weight: 900;
+}
+
+.head_ .active{
+    color: Red;
+}
+
+.main_game{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    background-color:grey;
+    align-items: center;
+}
+
+.element{
+    width: 100%;
+}
+
+.letters{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    width: 100%;
+    position: relative
+    /* font-size: 30px; */
+
+}
+
+.char{
+    text-decoration: none;
+    margin: 10px;
+    font-size: 40px;
+    font-family: roboto;
+}
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    display:flex;
+    flex-direction: column;
+  }
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .lost_msg, .won_msg {
+      font-size: 25px;
+      font-weight: 500;
+      align-self: center;
+      margin: 10px;   
+  }
+
+  .tenor-gif-embed{
+     display:flex;
+     align-self:center;
+     margin:40px;
+  }
+
+  .correct_ans{
+      font-size: 30px;
+      font-weight: 600;
+  }
