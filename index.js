@@ -15,7 +15,7 @@ userAction();
 
 const hangman = (text) => {
     // alert(text)
-    console.log(text)
+    // console.log(text)
     const letters = document.querySelector('.letters');
     for (let i = 0 ; i < text.length; i++){
         letters.innerHTML += '<li class="char char'+i+'"> _ <li>'
@@ -45,7 +45,7 @@ const hangman = (text) => {
        }
     }
 
-    console.log(number_list)
+    // console.log(number_list)
 
     for (let i = 0 ; i < no_of_pos; i++){
         var num = number_list[i];
@@ -62,8 +62,8 @@ const hangman = (text) => {
             unused_char.push(text.charAt(i))
         }
     }
-    console.log(used_char);
-    console.log(unused_char);
+    // console.log(used_char);
+    // console.log(unused_char);
     
 
     let health = 0;
@@ -73,7 +73,7 @@ const hangman = (text) => {
         var name = event.key;
 
         if(unused_char.includes(name)){
-            console.log('true');
+            // console.log('true');
             correct_count += 1
 
             // if(correct_count == len_of_unused_char){
@@ -96,7 +96,7 @@ const hangman = (text) => {
                 lost_game(text)
             }
             // document.querySelector('.msg').innerText='You Lost A Life. Now You Have '+ (7-health) +' lives';
-            console.log('false');
+            // console.log('false');
         }
         if(convert_to_string(text) == text){
             won_game();
@@ -117,7 +117,7 @@ function convert_to_string(text){
 
 
 function won_game(){
-    console.log('You Won The Game');
+    // console.log('You Won The Game');
     // alert('woohooo!!!! Your Gussed The Correct Answer');
     // setTimeout(function(){
     //     window.location.reload();
@@ -131,13 +131,14 @@ function won_game(){
 }
 
 function lost_game(text){
-    console.log('You Lost the game');
+    // console.log('You Lost the game');
     // alert('OOps....You Lost the Game... the Correct Answer was -> "'+text + '" - Better Luck Next Time!!');
     // setTimeout(function(){
     //     window.location.reload();
     // }, 1000)
     lost_modal.style.display = "block";
-    document.querySelector('.lost_msg').innerText = "Correct Answer Was ->" + " <span class='correct_ans'>"+text + " </span>"+"  Better Luck Next Time..";
+    let str = " <span class='correct_ans'>"+text + " </span>"
+    document.querySelector('.lost_msg').innerText = "Correct Answer Was ->" + text + " Better Luck Next Time..";
     span[1].onclick = function() {
         lost_modal.style.display = "none";
         window.location.reload();
